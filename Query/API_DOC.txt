@@ -1,0 +1,937 @@
+QUERY API DOCUMENTATION
+
+question
+
+1. Get question --------> api/question/
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+
+
+response =
+
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "uri": "http://localhost:8000/api/question/1/",
+            "id": 1,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "what is the best cryptocurrency to buy",
+            "like_num": 0,
+            "answer_num": 0,
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        }
+    ]
+}
+
+
+2. Get question_id --------> api/question/1/
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/1/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+response =
+
+{
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "uri": "http://localhost:8000/api/question/1/",
+            "id": 1,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "what is the best cryptocurrency to buy",
+            "like_num": 0,
+            "answer_num": 0,
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        }
+    ]
+}
+
+
+
+3. Post question ----------> api/question/
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6IlRydXRoIiwiZXhwIjoxNjI0MTA1NDc2LCJlbWFpbCI6InRydXRoQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjI0MTA1MTc2fQ.bvj2dIyR9ceLSjoGhkMDco-7RHSHuBPAqu8erPow-_g");
+
+var formdata = new FormData();
+formdata.append("question", "What is  the difference between be creative and being inteligent");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+4. Delete question -----------> api/question/1/
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'DELETE',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/1/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+Answer
+
+1. Post Answer ---------->   api/answer/?type=question&id=1/
+
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkFkYW0iLCJleHAiOjE2MjQxMTI4NzEsImVtYWlsIjoiQWRhbUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTYyNDExMjU3MX0.jvq3cUB_5fMGTVPrSVE5ucO5mwZ9marxH-d9SQ4pS6I");
+
+var formdata = new FormData();
+formdata.append("answer", "A creative person is one that has good visual prones and has good ability to build something innovative an inteligent person has strong logical prones and deal mainly with how things function");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/answer/?type=question&id=1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+response = 
+
+{
+    "id": 1,
+    "answer": "A creative person is one that has good visual prones and has good ability to build something innovative an inteligent person has strong logical prones and deal mainly with how things function",
+    "date_posted": "2021-06-19T14:52:23.698663Z"
+}
+
+
+
+Comment
+
+1. Comment Answer  ----------> api/comment/?type=answer&id=1
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6InByaW5jZSIsImV4cCI6MTYyNDExMzM4NSwiZW1haWwiOiIiLCJvcmlnX2lhdCI6MTYyNDExMzA4NX0.l7zE-BYegY7P-VdIoMgV92ssPmNhGZy0odrdIfsCpO4");
+
+var formdata = new FormData();
+formdata.append("comment", "Wow that was a realy impressive answer");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/comment/?type=answer&id=1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response = 
+
+{
+    "id": 1,
+    "coment": "Wow that was a realy impressive answer",
+    "date_posted": "2021-06-19T14:52:23.698663Z"
+}
+
+
+Like
+
+1. Like Question ----------> api/like/?type=question&id=1
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6IlRydXRoIiwiZXhwIjoxNjI0MTE0NTI0LCJlbWFpbCI6InRydXRoQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjI0MTE0MjI0fQ.JiYhYC-HOLddqNI-uskNQeijnh0zV3BOkTv0LXwxv9w");
+
+var formdata = new FormData();
+formdata.append("like", "L");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/like/?type=question&id=1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response = 
+
+{
+    "id": 1,
+    "like": "L",
+    "date_posted": "2021-06-19T14:52:23.698663Z"
+}
+
+2. Like Answer ----------> api/like/?type=answer&id=1
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6IlRydXRoIiwiZXhwIjoxNjI0MTE0NTI0LCJlbWFpbCI6InRydXRoQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjI0MTE0MjI0fQ.JiYhYC-HOLddqNI-uskNQeijnh0zV3BOkTv0LXwxv9w");
+
+var formdata = new FormData();
+formdata.append("like", "L");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/like/?type=answer&id=1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response = 
+
+{
+    "id": 1,
+    "like": "L",
+    "date_posted": "2021-06-19T14:52:23.698663Z"
+}
+
+
+
+3. Like Comment ----------> api/like/?type=comment&id=1
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6IlRydXRoIiwiZXhwIjoxNjI0MTE0NTI0LCJlbWFpbCI6InRydXRoQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjI0MTE0MjI0fQ.JiYhYC-HOLddqNI-uskNQeijnh0zV3BOkTv0LXwxv9w");
+
+var formdata = new FormData();
+formdata.append("like", "L");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/like/?type=comment&id=1", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response = 
+
+{
+    "id": 1,
+    "like": "L",
+    "date_posted": "2021-06-19T14:52:23.698663Z"
+}
+
+
+
+Authentication
+
+1. Sign up -------> api/account/register
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT " + eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkFkYW0iLCJleHAiOjE2MjQwNTYyODEsImVtYWlsIjoiQWRhbUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTYyNDA1NTk4MX0.B5Hzk6KsWMlLiSvjVT25ZVM8nfhJZ2WBke3D-owxdeA);
+
+var formdata = new FormData();
+formdata.append("username", "Adam");
+formdata.append("password", "vocabulary");
+formdata.append("email", "Adam@gmail.com");
+
+var requestOptions = {
+  method: 'POST',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/account/register/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+response
+
+{
+    "username": "Adam",
+    "email": "Adam@gmail.com",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6IlByZXR0eSIsImV4cCI6MTYyNDExNTUyNywiZW1haWwiOiJwcmV0dHlAZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MjQxMTUyMjd9.hMCAVCIM5ctJNdippaep-STEoy0fW4zi-khAtPEbKoY",
+    "expires": "2021-06-26T15:03:47.383386Z",
+    "message": "Thank you for registering. Please verify your email before continuing",
+    "status_code": {
+        "detail": "Successfully deleted",
+        "status": 200
+    }
+}
+
+
+2. Sign in ---------> api/account/
+
+var formdata = new FormData();
+formdata.append("username", "Adam");
+formdata.append("password", "vocabulary");
+
+var requestOptions = {
+  method: 'POST',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/account/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response
+
+{
+    "response": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkFkYW0iLCJleHAiOjE2MjQxMTU2MzksImVtYWlsIjoiQWRhbUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTYyNDExNTMzOX0.EvRApwH0mBPgfZB424F7lSHvclbOc98rnT96XBKzQyo",
+        "user": "Adam",
+        "expires": "2021-06-26T15:05:39.980809Z"
+    },
+    "detail": "Successfully logged in",
+    "status_code": 200
+}
+
+
+
+3. refresh_token  ----------> api/account/refresh/
+
+
+var formdata = new FormData();
+formdata.append("token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkFkYW0iLCJleHAiOjE2MjQxMTU2MzksImVtYWlsIjoiQWRhbUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTYyNDExNTMzOX0.EvRApwH0mBPgfZB424F7lSHvclbOc98rnT96XBKzQyo");
+
+var requestOptions = {
+  method: 'POST',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/account/refresh/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+response
+
+{
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6IkFkYW0iLCJleHAiOjE2MjQxMTU3MjEsImVtYWlsIjoiQWRhbUBnbWFpbC5jb20iLCJvcmlnX2lhdCI6MTYyNDExNTMzOX0.CQDjS8uzBNqQr657mXRAJnUrHapclSqUZMxCRDjUjrg",
+    "user": "Adam",
+    "expires": "2021-06-26T15:07:01.407536Z"
+}
+
+
+Profile 
+
+1. Get Profile --------> api/profiles/
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/profiles/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+{
+    "count": 4,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 1,
+            "user": {
+                "id": 1,
+                "username": "Truth",
+                "uri": "http://localhost:8000/api/user/Truth/"
+            },
+            "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+        },
+        {
+            "id": 2,
+            "user": {
+                "id": 2,
+                "username": "Adam",
+                "uri": "http://localhost:8000/api/user/Adam/"
+            },
+            "image": "http://localhost:8000/media/default.jpg"
+        },
+        {
+            "id": 3,
+            "user": {
+                "id": 3,
+                "username": "prince",
+                "uri": "http://localhost:8000/api/user/prince/"
+            },
+            "image": "http://localhost:8000/media/default.jpg"
+        },
+        {
+            "id": 4,
+            "user": {
+                "id": 4,
+                "username": "Pretty",
+                "uri": "http://localhost:8000/api/user/Pretty/"
+            },
+            "image": "http://localhost:8000/media/default.jpg"
+        }
+    ]
+}
+
+
+
+
+2. Get user_profile --------> api/profiles/1/
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/profiles/1/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+response
+
+
+{
+    "id": 1,
+    "user": {
+        "id": 1,
+        "username": "Truth",
+        "uri": "http://localhost:8000/api/user/Truth/"
+    },
+    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg",
+    "bio": "A backend and software developer"
+}
+
+
+
+
+3. Update profile ----------> api/profiles/1/
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6IlRydXRoIiwiZXhwIjoxNjI0MDU5MTU0LCJlbWFpbCI6InRydXRoQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjI0MDU4ODU0fQ.lOfrJdOatM7C7Ig46rxxiAK1QI7EMcaRVGMhkAxP29E");
+
+var formdata = new FormData();
+formdata.append("image", fileInput.files[0], "/C:/Users/hp/Pictures/IMG_7955.jpg");
+formdata.append("bio", "A backend and software developer");
+
+var requestOptions = {
+  method: 'PUT',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/profiles/1/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+
+response
+
+
+{
+    "id": 1,
+    "user": {
+        "id": 1,
+        "username": "Truth",
+        "uri": "http://localhost:8000/api/user/Truth/"
+    },
+    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg",
+    "bio": "A backend and software developer"
+}
+
+
+
+
+4. Delete account ----------> api/profiles/1/
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'DELETE',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/profiles/1/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+5. Get User_questions --------> api/username/questions/
+
+var myHeaders = new Headers();
+myHeaders.append("Authorization", "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6IlRydXRoIiwiZXhwIjoxNjI0MDYxNTgzLCJlbWFpbCI6InRydXRoQGdtYWlsLmNvbSIsIm9yaWdfaWF0IjoxNjI0MDYxMjgzfQ.n-mTXdoxpPxMXXKRs1Lv-RsHBKNG23onlC9POsOS_vM");
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/user/Truth/questions/", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": 2,
+            "question": "What is  the difference between be creative and being inteligent",
+            "date_posted": "2021-06-19T12:22:56.069340Z"
+        },
+        {
+            "id": 1,
+            "question": "What is  the best cryptocurrency to invest in",
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        }
+    ]
+}
+
+
+Search
+
+1. Search Question --------> api/question/?q=creative
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/?q=creative", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "uri": "http://localhost:8000/api/question/2/",
+            "id": 2,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 0,
+            "answer_num": 0,
+            "date_posted": "2021-06-19T12:22:56.069340Z"
+        },
+        {
+            "uri": "http://localhost:8000/api/question/1/",
+            "id": 1,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 1,
+            "answer_num": 1,
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        }
+    ]
+}
+
+
+Ordering
+
+1. Ordering question by date_posted ascending -------> api/question/?ordering=date_posted
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/?ordering=date_posted", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+response
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+            "uri": "http://localhost:8000/api/question/1/",
+            "id": 1,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 1,
+            "answer_num": 1,
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        },
+
+        {
+            "uri": "http://localhost:8000/api/question/2/",
+            "id": 2,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 0,
+            "answer_num": 0,
+            "date_posted": "2021-06-19T12:22:56.069340Z"
+        }
+    ]
+}
+
+
+2. Ordering question by date_posted descending -------> api/question/?ordering=-date_posted
+
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/?ordering=-date_posted", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+response
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "uri": "http://localhost:8000/api/question/2/",
+            "id": 2,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 0,
+            "answer_num": 0,
+            "date_posted": "2021-06-19T12:22:56.069340Z"
+        },
+        {
+            "uri": "http://localhost:8000/api/question/1/",
+            "id": 1,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 1,
+            "answer_num": 1,
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        }
+    ]
+}
+
+3. Ordering question by date_posted ascending and Search
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/?ordering=date_posted&q=creative", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+response
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "uri": "http://localhost:8000/api/question/2/",
+            "id": 2,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 0,
+            "answer_num": 0,
+            "date_posted": "2021-06-19T12:22:56.069340Z"
+        },
+        {
+            "uri": "http://localhost:8000/api/question/1/",
+            "id": 1,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 1,
+            "answer_num": 1,
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        }
+    ]
+}
+
+
+3. Ordering question by date_posted descending and Search
+
+var formdata = new FormData();
+
+var requestOptions = {
+  method: 'GET',
+  body: formdata,
+  redirect: 'follow'
+};
+
+fetch("http://localhost:8000/api/question/?ordering=-date_posted&q=creative", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
+
+
+response
+
+{
+    "count": 2,
+    "next": null,
+    "previous": null,
+    "results": [
+      {
+            "uri": "http://localhost:8000/api/question/1/",
+            "id": 1,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 1,
+            "answer_num": 1,
+            "date_posted": "2021-06-19T00:17:14.496589Z"
+        },
+
+        {
+            "uri": "http://localhost:8000/api/question/2/",
+            "id": 2,
+            "profile": [
+                {
+                    "id": 1,
+                    "user": {
+                        "id": 1,
+                        "username": "Truth",
+                        "uri": "http://localhost:8000/api/user/Truth/"
+                    },
+                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                }
+            ],
+            "question": "What is  the difference between be creative and being inteligent",
+            "like_num": 0,
+            "answer_num": 0,
+            "date_posted": "2021-06-19T12:22:56.069340Z"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
