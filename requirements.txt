@@ -16,3 +16,4 @@ six==1.16.0
 sqlparse 
 urllib3==1.26.5
 wincertstore==0.2
+django_heroku
