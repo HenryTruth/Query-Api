@@ -17,4 +17,3 @@ sqlparse
 urllib3==1.26.5
 wincertstore==0.2
 django_heroku
-whitenoise
