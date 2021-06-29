@@ -1,4 +1,4 @@
-asgiref @ file:///tmp/build/80754af9/asgiref_1617740417847/work
+asgiref 
 certifi==2021.5.30
 cloudinary==1.26.0
 Django @ file:///tmp/build/80754af9/django_1622711766781/work
