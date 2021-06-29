@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^n_kwah7nfk)9o5j26@^+p2_(vdx&dr39vy#mumw=@ty=-hsp8'
+# SECRET_KEY = 'django-insecure-^n_kwah7nfk)9o5j26@^+p2_(vdx&dr39vy#mumw=@ty=-hsp8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['querybackendapi.herokuapp.com']
 
 
 # Application definition
@@ -158,3 +158,5 @@ cloudinary.config(
 )
 
 django_heroku.settings(locals())
+
+SECRET_KEY = '94e17d7aee6db86737f9cfbadac19e03f9ac8e8c78dc0ba8'
