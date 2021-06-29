@@ -12,7 +12,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
 
@@ -25,7 +25,7 @@ response =
     "previous": null,
     "results": [
         {
-            "uri": "http://localhost:8000/api/question/1/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/1/",
             "id": 1,
             "profile": [
                 {
@@ -33,9 +33,9 @@ response =
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "what is the best cryptocurrency to buy",
@@ -57,7 +57,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/1/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/1/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -72,7 +72,7 @@ response =
     "previous": null,
     "results": [
         {
-            "uri": "http://localhost:8000/api/question/1/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/1/",
             "id": 1,
             "profile": [
                 {
@@ -80,9 +80,9 @@ response =
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "what is the best cryptocurrency to buy",
@@ -110,7 +110,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -127,7 +127,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/1/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/1/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -152,7 +152,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/answer/?type=question&id=1", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/answer/?type=question&id=1", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -184,7 +184,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/comment/?type=answer&id=1", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/comment/?type=answer&id=1", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -216,7 +216,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/like/?type=question&id=1", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/like/?type=question&id=1", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -245,7 +245,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/like/?type=answer&id=1", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/like/?type=answer&id=1", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -276,7 +276,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/like/?type=comment&id=1", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/like/?type=comment&id=1", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -311,7 +311,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/account/register/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/account/register/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -345,7 +345,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/account/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/account/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -377,7 +377,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/account/refresh/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/account/refresh/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -405,7 +405,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/profiles/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/profiles/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -422,36 +422,36 @@ fetch("http://localhost:8000/api/profiles/", requestOptions)
             "user": {
                 "id": 1,
                 "username": "Truth",
-                "uri": "http://localhost:8000/api/user/Truth/"
+                "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
             },
-            "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+            "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
         },
         {
             "id": 2,
             "user": {
                 "id": 2,
                 "username": "Adam",
-                "uri": "http://localhost:8000/api/user/Adam/"
+                "uri": "https://querybackendapi.herokuapp.com/api/user/Adam/"
             },
-            "image": "http://localhost:8000/media/default.jpg"
+            "image": "https://querybackendapi.herokuapp.com/media/default.jpg"
         },
         {
             "id": 3,
             "user": {
                 "id": 3,
                 "username": "prince",
-                "uri": "http://localhost:8000/api/user/prince/"
+                "uri": "https://querybackendapi.herokuapp.com/api/user/prince/"
             },
-            "image": "http://localhost:8000/media/default.jpg"
+            "image": "https://querybackendapi.herokuapp.com/media/default.jpg"
         },
         {
             "id": 4,
             "user": {
                 "id": 4,
                 "username": "Pretty",
-                "uri": "http://localhost:8000/api/user/Pretty/"
+                "uri": "https://querybackendapi.herokuapp.com/api/user/Pretty/"
             },
-            "image": "http://localhost:8000/media/default.jpg"
+            "image": "https://querybackendapi.herokuapp.com/media/default.jpg"
         }
     ]
 }
@@ -469,7 +469,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/profiles/1/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/profiles/1/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -484,9 +484,9 @@ response
     "user": {
         "id": 1,
         "username": "Truth",
-        "uri": "http://localhost:8000/api/user/Truth/"
+        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
     },
-    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg",
+    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg",
     "bio": "A backend and software developer"
 }
 
@@ -509,7 +509,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/profiles/1/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/profiles/1/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -525,9 +525,9 @@ response
     "user": {
         "id": 1,
         "username": "Truth",
-        "uri": "http://localhost:8000/api/user/Truth/"
+        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
     },
-    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg",
+    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg",
     "bio": "A backend and software developer"
 }
 
@@ -544,7 +544,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/profiles/1/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/profiles/1/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -564,7 +564,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/user/Truth/questions/", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/user/Truth/questions/", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -603,7 +603,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/?q=creative", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/?q=creative", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -617,7 +617,7 @@ response
     "previous": null,
     "results": [
         {
-            "uri": "http://localhost:8000/api/question/2/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/2/",
             "id": 2,
             "profile": [
                 {
@@ -625,9 +625,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -636,7 +636,7 @@ response
             "date_posted": "2021-06-19T12:22:56.069340Z"
         },
         {
-            "uri": "http://localhost:8000/api/question/1/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/1/",
             "id": 1,
             "profile": [
                 {
@@ -644,9 +644,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -670,7 +670,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/?ordering=date_posted", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/?ordering=date_posted", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -685,7 +685,7 @@ response
     "previous": null,
     "results": [
       {
-            "uri": "http://localhost:8000/api/question/1/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/1/",
             "id": 1,
             "profile": [
                 {
@@ -693,9 +693,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -705,7 +705,7 @@ response
         },
 
         {
-            "uri": "http://localhost:8000/api/question/2/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/2/",
             "id": 2,
             "profile": [
                 {
@@ -713,9 +713,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -738,7 +738,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/?ordering=-date_posted", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/?ordering=-date_posted", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -752,7 +752,7 @@ response
     "previous": null,
     "results": [
         {
-            "uri": "http://localhost:8000/api/question/2/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/2/",
             "id": 2,
             "profile": [
                 {
@@ -760,9 +760,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -771,7 +771,7 @@ response
             "date_posted": "2021-06-19T12:22:56.069340Z"
         },
         {
-            "uri": "http://localhost:8000/api/question/1/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/1/",
             "id": 1,
             "profile": [
                 {
@@ -779,9 +779,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -802,7 +802,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/?ordering=date_posted&q=creative", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/?ordering=date_posted&q=creative", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -817,7 +817,7 @@ response
     "previous": null,
     "results": [
         {
-            "uri": "http://localhost:8000/api/question/2/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/2/",
             "id": 2,
             "profile": [
                 {
@@ -825,9 +825,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -836,7 +836,7 @@ response
             "date_posted": "2021-06-19T12:22:56.069340Z"
         },
         {
-            "uri": "http://localhost:8000/api/question/1/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/1/",
             "id": 1,
             "profile": [
                 {
@@ -844,9 +844,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -868,7 +868,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/?ordering=-date_posted&q=creative", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/?ordering=-date_posted&q=creative", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -883,7 +883,7 @@ response
     "previous": null,
     "results": [
       {
-            "uri": "http://localhost:8000/api/question/1/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/1/",
             "id": 1,
             "profile": [
                 {
@@ -891,9 +891,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -903,7 +903,7 @@ response
         },
 
         {
-            "uri": "http://localhost:8000/api/question/2/",
+            "uri": "https://querybackendapi.herokuapp.com/api/question/2/",
             "id": 2,
             "profile": [
                 {
@@ -911,9 +911,9 @@ response
                     "user": {
                         "id": 1,
                         "username": "Truth",
-                        "uri": "http://localhost:8000/api/user/Truth/"
+                        "uri": "https://querybackendapi.herokuapp.com/api/user/Truth/"
                     },
-                    "image": "http://localhost:8000/media/profile_pics/IMG_7955.jpg"
+                    "image": "https://querybackendapi.herokuapp.com/media/profile_pics/IMG_7955.jpg"
                 }
             ],
             "question": "What is  the difference between be creative and being inteligent",
@@ -936,7 +936,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://localhost:8000/api/question/?limit=5", requestOptions)
+fetch("https://querybackendapi.herokuapp.com/api/question/?limit=5", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
