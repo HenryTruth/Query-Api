@@ -326,10 +326,6 @@ response
     "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6IlByZXR0eSIsImV4cCI6MTYyNDExNTUyNywiZW1haWwiOiJwcmV0dHlAZ21haWwuY29tIiwib3JpZ19pYXQiOjE2MjQxMTUyMjd9.hMCAVCIM5ctJNdippaep-STEoy0fW4zi-khAtPEbKoY",
     "expires": "2021-06-26T15:03:47.383386Z",
     "message": "Thank you for registering. Please verify your email before continuing",
-    "status_code": {
-        "detail": "Successfully deleted",
-        "status": 200
-    }
 }
 
 
